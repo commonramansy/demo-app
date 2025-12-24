@@ -16,8 +16,7 @@ service:
   type: ClusterIP
   port: 8080
   targetPort: 80
-  # If you want NodePort, set type: NodePort and optionally set nodePort (within 30000-32767)
-  nodePort: null
+  nodePort: 30080
 
 resources:
   requests:
