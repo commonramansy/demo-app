@@ -9,12 +9,12 @@ replicaCount: 2
 
 image:
   repository: nginx
-  tag: "1.26"
+  tag: "1.25"
   pullPolicy: IfNotPresent
 
 service:
   type: ClusterIP
-  port: 80
+  port: 8080
   targetPort: 80
   # If you want NodePort, set type: NodePort and optionally set nodePort (within 30000-32767)
   nodePort: null
