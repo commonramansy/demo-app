@@ -1,0 +1,28 @@
+nameOverride: ""
+fullnameOverride: ""
+
+namespace:
+  create: true
+  name: demo-app
+
+replicaCount: 2
+
+image:
+  repository: nginx
+  tag: "1.25"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 80
+  # If you want NodePort, set type: NodePort and optionally set nodePort (within 30000-32767)
+  nodePort: null
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 64Mi
+  limits:
+    cpu: 250m
+    memory: 128Mi
