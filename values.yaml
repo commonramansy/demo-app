@@ -1,20 +1,13 @@
-nameOverride: ""
-fullnameOverride: ""
-
-namespace:
-  create: true
-  name: demo-app
-
 replicaCount: 2
 
 image:
   repository: nginx
-  tag: "1.26"
+  tag: "1.25"
   pullPolicy: IfNotPresent
 
 service:
   type: NodePort
-  port: 8080
+  port: 80
   targetPort: 80
   nodePort: 30080
 
